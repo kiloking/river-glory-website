@@ -60,33 +60,36 @@ function Footer() {
   }
   return (
     <div
-      className='w-full h-full  bg-cover bg-bottom bg-no-repeat pt-20 relative bg-[#006671]  '
+      className='w-full h-full  bg-cover bg-center bg-no-repeat pt-20 relative bg-[#006671]  '
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL +'/images/footer_bg.png'})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL +'/images/release/footer_bg.png'})`,
       }}
     > 
-      <div className=' w-[95%] h-[98%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-white/50 border '></div>
-      <div className='flex flex-col md:flex-row w-full mx-auto gap-14 py-1 pb-20 items-center '>
-        <div className='w-4/5 md:w-2/3 mx-auto' >
-          <img src={process.env.PUBLIC_URL+'/images/footer_title.png'} alt="" className='max-w-full' />
+      <div className='flex flex-col md:flex-row w-full md:w-6/12 justify-center mx-auto gap-14 py-1 pb-20 items-center '>
+        <div className='w-4/5 md:w-full mx-auto' >
+          <div className='w-[40%] mx-auto mb-12'>
+            <img src={process.env.PUBLIC_URL+'/images/release/footer_title.png'} alt="" className='max-w-full w-full' />
+          </div>
+
           {/* 表單 */}
           <div className='md:w-full mx-auto'>
             <form onSubmit={handleSubmit(onSubmit)} className="w-full mx-auto pt-5  rel" data-aos="fade-up" data-aos-duration="1500" >
               <div className='w-full  my-3 '>
-                <input type="text" className="block  bg-white  w-full
-                    px-3 py-2  " placeholder="姓名"   {...register("name", { required: true})}/>
+                <input type="text" className="block  bg-white/50  w-full rounded-full
+                    px-3 py-3  " placeholder="姓名"   {...register("name", { required: true})}/>
               </div>
               <div className='w-full  my-3 '>
-                <input type="text" className="block  bg-white  w-full 
-                    px-3 py-2  " placeholder="聯絡電話"    {...register("tel", { required: true})}/>
+                <input type="text" className="block  bg-white/50  w-full rounded-full
+                    px-3 py-3  " placeholder="聯絡電話"    {...register("tel", { required: true})}/>
               </div>
               <div className='w-full my-3  '>
-                <input type="mail" className="block  bg-white   w-full
-                    px-3 py-2 " placeholder="電子信箱"   {...register("mail", { required: true})}/>
+                <input type="mail" className="block  bg-white/50  w-full rounded-full
+                    px-3 py-3" placeholder="電子信箱"   {...register("mail", { required: true})}/>
               </div>
               <div className='flex gap-3'>
                 <div className='w-full  '>
-                  <select className="block  bg-white  w-full px-3 py-2 "  {...register("main_district", { required: true})} onChange={(e)=>{
+                  <select className="block  bg-white/50  w-full rounded-full
+                    px-3 py-3 "  {...register("main_district", { required: true})} onChange={(e)=>{
                     handleChange(e)
                   }}>
                     <option defaultValue value="">居住縣市</option>
@@ -100,7 +103,8 @@ function Footer() {
                   </select>
                 </div>
                 <div className='w-full  '>
-                  <select className="block  bg-white  w-full px-3 py-2  "  {...register("sub_district", { required: true})}>
+                  <select className="block  bg-white/50  w-full rounded-full
+                    px-3 py-3  "  {...register("sub_district", { required: true})}>
                     <option defaultValue value="">居住地區</option>
                     {
                       subDistricts.map((item,index)=>{
@@ -121,19 +125,21 @@ function Footer() {
                   <div className='text-white ml-2 text-xs  underline-offset-2 cursor-pointer' onClick={()=>setIsOpen(true)}>本人已知悉，<span className=''>『個人資料蒐集聲明事項』</span></div>
                 </div>
               </div>
-              <div className='flex flex-col w-full mx-auto gap-4 my-3 md:mt-8'>
-                <button className='border-white text-white  border-2 px-2 py-2  font-bold w-full    text-md tracking-wide ' type='submit'>送出</button>
-                <button className='bg-[#fff] px-2 py-2  font-bold w-full   text-md tracking-wide text-[#223553]' type='reset'>清除</button>
+              <div className='flex flex-col w-full mx-auto gap-4 my-3 md:mt-8 w-1/2'>
+                <button className=' text-white   px-2 py-2  font-bold w-full rounded-full bg-[#0F7073]   text-md tracking-wide ' type='submit'>送出</button>
+                <button className='bg-[#fff] px-2 py-2  font-bold w-full   text-md tracking-wide text-[#223553] rounded-full' type='reset'>清除</button>
               </div>
               <div>{error}  {mailSent}</div>            
             </form>
           </div>
-          <div className='mt-10'>
-            <img src={process.env.PUBLIC_URL+'/images/footer_subtitle.png'} alt="" />
-            <img src={process.env.PUBLIC_URL+'/images/footer_logo.png'} alt=""  className='mt-10 w-2/3 mx-auto'/>
+          <div className='mt-12'>
+            <img src={process.env.PUBLIC_URL+'/images/release/footer_subtitle.png'} alt="" />
           </div>
 
         </div>
+      </div>
+      <div className='bg-[#0F7073] py-10 px-20'>
+        <img src={process.env.PUBLIC_URL+'/images/release/footer_credit.png'} alt="" />
       </div>
 
       {/* Modal */}
