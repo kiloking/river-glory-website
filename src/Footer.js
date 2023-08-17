@@ -67,7 +67,7 @@ function Footer() {
     > 
       <div className='flex flex-col md:flex-row w-full md:w-6/12 justify-center mx-auto gap-14 py-1 pb-20 items-center '>
         <div className='w-4/5 md:w-full mx-auto' >
-          <div className='w-[40%] mx-auto mb-12'>
+          <div className='w-[40%] mx-auto md:mb-12'>
             <img src={process.env.PUBLIC_URL+'/images/release/footer_title.png'} alt="" className='max-w-full w-full' />
           </div>
 
@@ -75,20 +75,20 @@ function Footer() {
           <div className='md:w-full mx-auto'>
             <form onSubmit={handleSubmit(onSubmit)} className="w-full mx-auto pt-5  rel" data-aos="fade-up" data-aos-duration="1500" >
               <div className='w-full  my-3 '>
-                <input type="text" className="block  bg-white/50  w-full rounded-full
-                    px-3 py-3  " placeholder="姓名"   {...register("name", { required: true})}/>
+                <input type="text" className="block  bg-white/60  w-full rounded-full
+                    px-3 py-3  placeholder-gray-800" placeholder="姓名"   {...register("name", { required: true})}/>
               </div>
               <div className='w-full  my-3 '>
-                <input type="text" className="block  bg-white/50  w-full rounded-full
-                    px-3 py-3  " placeholder="聯絡電話"    {...register("tel", { required: true})}/>
+                <input type="text" className="block  bg-white/60  w-full rounded-full
+                    px-3 py-3  placeholder-gray-800" placeholder="聯絡電話"    {...register("tel", { required: true})}/>
               </div>
               <div className='w-full my-3  '>
-                <input type="mail" className="block  bg-white/50  w-full rounded-full
-                    px-3 py-3" placeholder="電子信箱"   {...register("mail", { required: true})}/>
+                <input type="mail" className="block  bg-white/60  w-full rounded-full
+                    px-3 py-3 placeholder-gray-800" placeholder="電子信箱"   {...register("mail", { required: true})}/>
               </div>
               <div className='flex gap-3'>
                 <div className='w-full  '>
-                  <select className="block  bg-white/50  w-full rounded-full
+                  <select className="block  bg-white/60  w-full rounded-full
                     px-3 py-3 "  {...register("main_district", { required: true})} onChange={(e)=>{
                     handleChange(e)
                   }}>
@@ -103,7 +103,7 @@ function Footer() {
                   </select>
                 </div>
                 <div className='w-full  '>
-                  <select className="block  bg-white/50  w-full rounded-full
+                  <select className="block  bg-white/60  w-full rounded-full
                     px-3 py-3  "  {...register("sub_district", { required: true})}>
                     <option defaultValue value="">居住地區</option>
                     {
@@ -138,7 +138,7 @@ function Footer() {
 
         </div>
       </div>
-      <div className='bg-[#0F7073] py-10 px-20'>
+      <div className='bg-[#0F7073] py-7 px-3 md:py-10 md:px-20'>
         <img src={process.env.PUBLIC_URL+'/images/release/footer_credit.png'} alt="" />
       </div>
 
