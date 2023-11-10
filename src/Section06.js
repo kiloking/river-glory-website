@@ -16,7 +16,7 @@ function Section06() {
 
           </div>
           <div className='md:w-[50%] relative  flex flex-col justify-end '>
-            <img src={process.env.PUBLIC_URL+'/images/release/section06_p01.png'} alt="" className='max-w-full relative ' />
+            <img src={process.env.PUBLIC_URL+'/images/release/section06_p01.jpg'} alt="" className='max-w-full relative ' />
           </div>
         </div>
         <div className=' absolute bottom-32 left-10 w-[20%]'>
